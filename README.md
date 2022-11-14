@@ -1,4 +1,4 @@
-![](coverPage.png)
+
 
 # 123-JavaScript-Interview-Questions
 
@@ -11,7 +11,7 @@ This book's goal is to help javascript frontend developers prepare for technical
 
 ## Question 1. What's the difference between `undefined` and `not defined` in JavaScript
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 In JavaScript if you try to use a variable that doesn't exist and has not been declared, then JavaScript will throw an error `var name is not defined` and the script will stop executing thereafter. But If you use `typeof undeclared_variable` then it will return `undefined`.
 
@@ -51,7 +51,7 @@ console.log(y);  // Output: ReferenceError: y is not defined
 if( x <= 100 ) {...}
 if( !(x > 100) ) {...}
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 `NaN <= 100` is `false` and `NaN > 100` is also `false`, so if the
 value of `x` is `NaN`, the statements are not the same.
@@ -64,7 +64,7 @@ This is why you need to pay attention when you deal with numeric variables. `NaN
 
 ## Question 3. What is the drawback of declaring methods directly in JavaScript objects?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 One of the drawbacks of declaring methods directly in JavaScript objects is that they are very memory inefficient.  When you do that, a new copy of the method is created for each instance of an object. Here's an example:
 
@@ -97,7 +97,7 @@ In this case each instance variable `emp1`, `emp2`, `emp3` has its own copy of t
 
 ## Question 4. What is “closure” in javascript? Can you provide an example?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 A closure is a function defined inside another function (called parent function) and as such it has access to the variables declared and defined within its parent function's scope.
 
@@ -155,7 +155,7 @@ globalVar = abc
 console.log(mul(2)(3)(4)); // output : 24
 console.log(mul(4)(3)(4)); // output : 48
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 ```javascript
 function mul (x) {
@@ -188,7 +188,7 @@ var arrayList =  ['a', 'b', 'c', 'd', 'e', 'f'];
 
 How can we empty the array above?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 There are a couple of ways by which we can empty an array, So let's discuss all the possible way by which we can empty an array.
 
@@ -256,7 +256,7 @@ Above implementation can also empty the array. But not recommended to use often.
 
 ## Question 7. How to check if an object is an array or not?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The best way to find whether an object is instance of a particular class or not using `toString` method from `Object.prototype`
 
@@ -331,7 +331,7 @@ var output = (function(x) {
 
 console.log(output);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will output `0` as output. `delete` operator is used to delete a property from an object. Here `x` is not an object, it's a **local variable**. `delete` operator doesn't affect local variables.
 
@@ -349,7 +349,7 @@ var output = (function() {
 
 console.log(output);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will output `1` as output. `delete` operator is used to delete a property from an object. Here `x` is not an object it's **global variable** of type `number`.
 
@@ -367,7 +367,7 @@ var output = (function() {
 
 console.log(output);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will output `undefined` as output. `delete` operator is used to delete a property from an object. Here `x` is an object which has foo as a property and from a self-invoking function, we are deleting the `foo` property of object `x` and after deletion, we are trying to reference deleted property `foo` which result `undefined`.
 
@@ -385,7 +385,7 @@ delete emp1.company
 console.log(emp1.company);
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 The code above will output `xyz` as output. Here `emp1` object got company as **prototype** property. delete operator doesn't delete prototype property.
 
 `emp1` object doesn't have **company** as its own property. you can test it `console.log(emp1.hasOwnProperty('company')); //output : false` However, we can delete company property directly from `Employee` object using `delete Employee.company` or we can also delete from `emp1` object using `__proto__` property `delete emp1.__proto__.company`.
@@ -400,7 +400,7 @@ var trees = ["redwood", "bay", "cedar", "oak", "maple"];
 delete trees[3];
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
  - When you run the code above and do `console.log(trees);` in chrome developer console then you will get `["redwood", "bay", "cedar", undefined × 1, "maple"]`.
  - In the recent versions of Chrome you will see the word `empty` of `undefined x 1`.
  - When you run the same code in Firefox browser console then you will get `["redwood", "bay", "cedar", undefined, "maple"]`
@@ -420,7 +420,7 @@ var trees = ["xyz", "xxxx", "test", "ryan", "apple"];
 delete trees[3];
 console.log(trees.length);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 The code above will output `5` as output. When we used `delete` operator for deleting an array element then, the array length is not affected by this. This holds even if you deleted all elements of an array using `delete` operator.
 
 So when delete operator removes an array element that deleted element is no longer present in the array. In place of value at deleted index `undefined x 1` in **chrome** and `undefined` is placed at the index. If you do `console.log(trees)` output `["xyz", "xxxx", "test", undefined × 1, "apple"]` in Chrome and in Firefox `["xyz", "xxxx", "test", undefined, "apple"]`.
@@ -438,7 +438,7 @@ console.log(bar + "xyz");
 console.log(bar + true);  
 console.log(bar + false);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will output `1, "truexyz", 2, 1` as output. Here's a general guideline  for the plus operator:
   - Number + Number  -> Addition
@@ -458,7 +458,7 @@ The code above will output `1, "truexyz", 2, 1` as output. Here's a general guid
 var z = 1, y = z = typeof y;
 console.log(y);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will print string `"undefined"` as output. According to associativity rule operator with the same precedence are processed based on their associativity property of operator. Here associativity of the assignment operator is `Right to Left` so first `typeof y` will evaluate first which is string `"undefined"` and assigned to `z` and then `y` would be assigned the value of z. The overall sequence will look like that: 
 
@@ -480,7 +480,7 @@ var foo = function bar() { return 12; };
 typeof bar();
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `Reference Error`. To fix the bug we can try to rewrite the code a little bit: 
 
@@ -527,7 +527,7 @@ function bar () {
   // Some code
 }
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The main difference is that function `foo` is defined at `run-time` and is called a function expression, whereas function `bar` is defined at `parse time` and is called a function statement. To understand it better, let's take a look at the code below :
 
@@ -555,7 +555,7 @@ bar();
 (function abc(){console.log('something')})();
 function bar(){console.log('bar got called')};
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be :
 ``` 
@@ -568,7 +568,7 @@ Since the function is called first and defined during parse time the JS engine w
 
 ## Question 18. In which case the function definition is not hoisted in JavaScript?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 Let's take the following **function expression**
 
@@ -620,7 +620,7 @@ var salary = "1000$";
   console.log("My New Salary " + salary);
 })();
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The code above will output: `undefined, 5000$` because of hoisting. In the code presented above, you might be expecting `salary` to retain it values from outer scope until the point that `salary` was re-declared in the inner scope. But due to `hoisting` salary value was `undefined` instead. To understand it better have a look of the following code, here `salary` variable is hoisted and declared at the top in function scope. When we print its value using `console.log` the result is `undefined`. Afterwards the variable is redeclared and the new value `"5000$"` is assigned to it.
 
@@ -641,7 +641,7 @@ var salary = "1000$";
 
 ## Question 20. What’s the difference between `typeof` and `instanceof`?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 `typeof` is an operator that returns a string with the type of whatever you pass.
 
@@ -677,7 +677,7 @@ var counterArray = {
 };
 counterArray["C"] = 1;
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 First of all, in the case of JavaScript an associative array is the same as an object. Secondly, even though there is no built-in function or property available to calculate the length/size an object, we can write such function ourselves.
 
@@ -725,7 +725,7 @@ _.size({one: 1, two: 2, three: 3});
 
 ## Question 22. Difference between `Function`, `Method` and `Constructor` calls in JavaScript.
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 If your are familiar with Object-oriented programming, More likely familiar to thinking of functions, methods, and class constructors as three separate things. But In JavaScript, these are just three different usage patterns of one single construct.
 
@@ -794,7 +794,7 @@ var person = new User("xyz")["location"] = "USA";
 console.log(person);
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output of above code would be `"USA"`. Here `new User("xyz")` creates a brand new object and created property `location` on that and `USA` has been assigned to object property location and that has been referenced by the person.
 
@@ -819,7 +819,7 @@ foo["location"] = "USA";
 
 ## Question 24. What are Service Workers and when can you use them?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 It’s a technology that allows your web application to use cached resources first, and provide default experience offline, before getting more data from the network later. This principle is commonly known as Offline First.
 
@@ -831,7 +831,7 @@ As of 2017, Service Workers are not supported in IE and Safari.
 
 ## Question 25. What is the difference between a method and a function in javascript?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 In JS, that difference is quite subtle. A function is a piece of code that is called by name and function itself not associated with any object and not defined inside any object. It can be passed data to operate on (i.e. parameter) and can optionally return data (the return value).
 
@@ -919,7 +919,7 @@ obj1.myMethod(); // will print "Hi there" following with obj1.
 </details>
 
 ## Question 26. What is IIFE (Immediately Invoked Function Expression) and how it can be useful?
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 #### Definition
 IIFE a function that runs as soon as it's defined. Usually it's anonymous (doesn't have a function name), but it also can be named. Here's an example of IIFE:
@@ -988,7 +988,7 @@ code, it helps to prevent polluting the global scope and provide the module inte
 </details>
 
 ## Question 27. Describe Singleton Pattern In JavaScript
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The singleton pattern is an often used JavaScript design pattern. It provides a way to wrap the code into a logical unit that can be accessed through a single variable. The Singleton design pattern is used when only one instance of an object is needed throughout the lifetime of an application. In JavaScript, Singleton pattern have many uses, they can be used for NameSpacing, which reduce the number of global variables in your page (prevent from polluting global space), organizing the code in a consistent manner, which increase the readability and maintainability of your pages.
 
@@ -1095,7 +1095,7 @@ The singleton implemented above is easy to understand. The singleton class maint
 
 ## Question 28. What are the ways of creating objects in JavaScript ?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 #### Method 1: Function based
 
@@ -1168,7 +1168,7 @@ employee.getName = function(){
 ``` javascript
 var newObject = deepClone(obj);
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 ```javascript
 function deepClone(object){
@@ -1205,7 +1205,7 @@ So when we do deep clone then we should copy every property (including the neste
 
 ## Question 30. Best way to detect `undefined` object property in JavaScript.
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 > Suppose we have given an object `person`
 
@@ -1243,7 +1243,7 @@ if(typeof person.salary === 'undefined'){
 	console.log(cloneObj === Clone(objectLit)); // this should return false
 	console.log(cloneObj == Clone(objectLit)); // this should return true
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 ```javascript
 function Clone(object){
@@ -1259,7 +1259,7 @@ function Clone(object){
 
 ## Question 32. What are promises and how they are useful?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 We use promises for handling asynchronous interactions in a sequential manner. They are especially useful when we need to do an async operation and THEN do another async operation based on the results of the first one. For example, if you want to request the list of all flights and then for each flight you want to request some details about it. The promise represents the future value. It has an internal state (`pending`, `fulfilled` and `rejected`) and works like a state machine.
 
@@ -1278,7 +1278,7 @@ Be sure that you can implement the promise, read [one of the articles on a topic
 
 ## Question 33. How to check whether a key exist in a JavaScript object or not.
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 Let say we have `person` object with property **name** and **age**
 
@@ -1319,7 +1319,7 @@ console.log(person.hasOwnProperty('salary')); // print false
 
 ## Question 34. What is NaN, why do we need it, and when can it break the page?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 `NaN` stands for “not a number.” and it can break your table of numbers when it has an arithmetic operation that is not allowed. Here are some examples of how you can get `NaN`:
 
@@ -1354,7 +1354,7 @@ for (var i = 0; i < arr.length; i++) {
   }, 3000);
 }
 ```
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 For ES6, you can just replace `var i` with `let i`. 
 
@@ -1386,7 +1386,7 @@ arr.forEach(function(ele, i) {
 
 ## Question 36. How to check if the value of a variable in an array?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 We always encounter in such situation where we need to know whether value is type of array or not.
 
@@ -1481,7 +1481,7 @@ function isArray(value) {
 
 ## Question 37. Best way to detect reference values of any type in JavaScript ?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  In Javascript Object are called as reference type, Any value other then primitive is definitely a reference type. There are several built-in reference type such as **Object**, **Array**, **Function**, **Date**, **null** and **Error**.
 
@@ -1527,7 +1527,7 @@ console.log(emp1 instanceof Object); // true
 
 ## Question 38. How does Object.create method works JavaScript?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The ECMAScript 5 **Object.create()** method is the easiest way for one object to inherit from another, without invoking a constructor function. 
 
@@ -1580,7 +1580,7 @@ Object created in this manner give you full control over newly created object. Y
 
 ## Question 39. How to use constructor functions for inheritance in JavaScript?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 Let say we have `Person` class which has name, age, salary properties and **incrementSalary()** method.
 
@@ -1643,7 +1643,7 @@ Type-based inheritance is best used with developer defined constructor function 
 
 ## Question 40. How we can prevent modification of object in JavaScript ?.
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  ECMAScript 5 introduce several methods to prevent modification of object which lock down object to ensure that no one, accidentally or otherwise, change functionality of Object.
 
@@ -1758,7 +1758,7 @@ delete employee.name;  // fails silently unless it's in strict mode
 ## Question 41. Write a log function which will add prefix `(your message)` to every message you log using console.log ? 
  For example, If you log `console.log("Some message")` then output should be **(your message) Some message**
 
- <details><summary><b>Answer</b></summary>
+ <p><b><i>Answer</b></i></p>
 
 Logging error message or some informative message is always required when you dealing with client side JavaScript using console.log method. Some time you want to add some prefix to identify message generated log from your application hence you would like to prefix your app name in every console.log. 
 
@@ -1795,7 +1795,7 @@ For example: We can create string using string literal and using String construc
  var objStr = new String("Hi I am string object");
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  We can use typeof operator to test string literal and instanceof operator to test String object.
 
@@ -1813,7 +1813,7 @@ For example: We can create string using string literal and using String construc
 
 ## Question 43 . What is typical use case for anonymous function in JavaScript ?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  Anonymous functions basically used in following scenario.
 
@@ -1880,7 +1880,7 @@ If your answer is yes then go and create named function rather anonymous functio
 
 ## Question 44 . How to set a default parameter value ?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  If you are coming from python/c# you might be using default value for function parameter incase value(formal parameter) has not been passed. For instance : 
 
@@ -1979,7 +1979,7 @@ var address = {
 ```
 Write merge function which will take two object and add all the own property of second object into first object.
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 ```javascript
 merge(person , address); 
@@ -2015,7 +2015,7 @@ function merge(toObj, fromObj) {
 
 ## Question 46. What is non-enumerable property in JavaScript and how you can create one?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 Object can have properties that don't show up when you iterate through object using for...in loop or using Object.keys() to get an array of property names. This properties is know as non-enumerable properties.
 
@@ -2065,7 +2065,7 @@ person.phoneNo = '7777777777';
 
 ## Question 47. What is Function binding ?
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  Function binding falls in advance JavaScript category and this is very popular technique to use in conjunction with event handler and callback function to preserve code execution context while passing function as a parameter.
 
@@ -2123,7 +2123,7 @@ strB="bye there!";
 console.log (strA)
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `'hi there'` because we're dealing with strings here. Strings are 
 passed by value, that is, copied. 
@@ -2138,7 +2138,7 @@ objB.prop1 = 90;
 console.log(objA) 
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `{prop1: 90}` because we're dealing with objects here. Objects are 
 passed by reference, that is, `objA` and `objB` point to the same object in memory. 
@@ -2155,7 +2155,7 @@ console.log(objA)
 ```
 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `{prop1: 42}`. 
 
@@ -2177,7 +2177,7 @@ console.log(arrA)
 ```
 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `[42,1,2,3,4,5]`. 
 
@@ -2196,7 +2196,7 @@ console.log(arrA)
 ```
 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `[0,1,2,3,4,5]`. 
 
@@ -2214,7 +2214,7 @@ arrB[0].prop1=42;
 console.log(arrA);
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `[{prop1: 42},  {someProp: "also value of array A!"}, 3,4,5]`. 
 
@@ -2233,7 +2233,7 @@ arrB[3] = 20;
 console.log(arrA);
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
 The output will be `[{prop1: 42},  {someProp: "also value of array A!"}, 3,4,5]`. 
 
@@ -2270,7 +2270,7 @@ This is why changing the property of `arrB[0]` in `arrB` will also change the `a
 3.  Type Error
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) ReferenceError: employeeId is not defined 
 
@@ -2288,7 +2288,7 @@ var employeeId = '19000';
 3.  Type Error
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) undefined 
 
@@ -2309,7 +2309,7 @@ var employeeId = '1234abe';
 3.  Type Error
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) undefined 
 
@@ -2333,7 +2333,7 @@ var employeeId = '1234abe';
 3.  '1234abe'
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) undefined 
 
@@ -2355,7 +2355,7 @@ var employeeId = '1234abe';
 3.  'Hi I am inside displayFunc'
 4.  ReferenceError: displayFunc is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) undefined 
 
@@ -2378,7 +2378,7 @@ console.log(employeeId);
 3.  'abc123'
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) '123bcd' 
 
@@ -2404,7 +2404,7 @@ console.log(employeeId);
 3.  'abc123'
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) 'abc123' 
 
@@ -2431,7 +2431,7 @@ foo();
 3.  string
 4.  ReferenceError: employeeId is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 'function'
 
@@ -2457,7 +2457,7 @@ foo();
 3.  'Car'
 4.  ReferenceError: product is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) undefined
 
@@ -2485,7 +2485,7 @@ foo();
 3.  function function
 4.  ReferenceError: bar is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) function function
 
@@ -2518,7 +2518,7 @@ foo();
 3.  ["name", "salary", "country", "phoneNo"]
 4.  ["name", "salary", "country"]
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) ["name", "salary", "country", "phoneNo"]
 
@@ -2549,7 +2549,7 @@ foo();
 3.  ["name", "salary", "country", "phoneNo"]
 4.  ["name", "salary", "country"]
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) ["name", "salary", "country"]
 
@@ -2576,7 +2576,7 @@ foo();
 3.  true false
 4.  true true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) false false
 
@@ -2597,7 +2597,7 @@ foo();
 3.  true false
 4.  true true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) false false
 
@@ -2622,7 +2622,7 @@ foo();
 3.  true false
 4.  true true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) false false
 
@@ -2645,7 +2645,7 @@ foo();
 3.  true false
 4.  true true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) false false
 
@@ -2668,7 +2668,7 @@ foo();
 3.  true false
 4.  true true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) true true
 
@@ -2693,7 +2693,7 @@ foo();
 3.  true true true true
 4.  true true false false
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) true true true true
 
@@ -2717,7 +2717,7 @@ foo();
 3.  foo foo
 4.  bar foo
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) bar bar
 
@@ -2743,7 +2743,7 @@ foo();
 3.  foo foo
 4.  bar foo
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) foo foo
 
@@ -2769,7 +2769,7 @@ foo();
 3.  foo foo
 4.  undefined bar
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) undefined undefined
 
@@ -2792,7 +2792,7 @@ foo();
 3.  ["100"] 1
 4.  ReferenceError: array is not defined 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) ["100"] 1
 
@@ -2817,7 +2817,7 @@ foo();
 3.  [] [] ['1',2,'3',4,5.6] 5
 4.  [] [] [Array[5]] 5 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) [] [] [Array[5]] 1
 
@@ -2839,7 +2839,7 @@ foo();
 3.  6
 4.  undefined
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 11
 
@@ -2861,7 +2861,7 @@ foo();
 3.  6
 4.  undefined
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) 6
 
@@ -2883,7 +2883,7 @@ foo();
 3.  Type Error
 4.  undefined
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) [ 'dog', 'rat', 'goat', 'cow', 'horse', 'cat' ]
 
@@ -2906,7 +2906,7 @@ foo();
 3.  1 -1 -1 -1
 4.  1 undefined -1 4
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 1 -1 -1 4
 
@@ -2928,7 +2928,7 @@ foo();
 3.  1 1 -1 
 4.  1 undefined undefined
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 1 6 -1
 
@@ -2957,7 +2957,7 @@ foo();
 3.  [ 2, 4, 8, 12, 16 ] true 
 4.  [ 2, 4, 8, 12, 16 ] false
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) [ 2, 4, 8, 12, 16 ] true 
 
@@ -2997,7 +2997,7 @@ foo();
 	[ 2, '12', true,false]
 
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) [ 2, '12', true ]
 			 [ 2, '12', true ]
@@ -3040,7 +3040,7 @@ foo();
    []
    [ 'foo', 'bar', 'john', 'ritz' ]
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) [ 'bar', 'john', 'ritz' ]
 		 	 [ 'bar', 'john' ]
@@ -3066,7 +3066,7 @@ foo();
 3.  [ 'bar', 'john' ] [ 'bar', 'john' ] [ 'bar', 'john' ]
 4.  [ 'bar', 'john' ] [] []
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1.  [ 'bar', 'john' ] [] [ 'foo' ] 
 
@@ -3087,7 +3087,7 @@ foo();
 3.  [ 15, 16, 2, 23, 42, 8 ]
 4.  [ 2, 8, 15, 16, 23, 42 ]
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3.  [ 15, 16, 2, 23, 42, 8 ]
 
@@ -3118,7 +3118,7 @@ console.log(funcA());
 3.  Type Error
 4.  ReferenceError: this is not defined 
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 
 
@@ -3142,7 +3142,7 @@ console.log(obj.innerMessage);
 3.  Type Error
 4.  undefined true
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) undefined true
 
@@ -3166,7 +3166,7 @@ console.log(obj.innerMessage());
 3.  Type Error
 4.  ReferenceError: this.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) Hello
 
@@ -3191,7 +3191,7 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) undefined
 	
@@ -3217,7 +3217,7 @@ console.log(obj.innerMessage());
 3.  undefined
 4.  ReferenceError: self.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 'Hello'
 
@@ -3239,7 +3239,7 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) undefined
 
@@ -3261,7 +3261,7 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 'Hi John'
 
@@ -3282,7 +3282,7 @@ console.log(myFunc());
 3.  undefined
 4.  ReferenceError: this.message is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 'Hi John'
 
@@ -3304,7 +3304,7 @@ console.log(myFunc("a","b","c","d"));
 3.  undefined
 4.  ReferenceError
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  a) 2 2 2 
 
@@ -3326,7 +3326,7 @@ console.log(myFunc("a","b","c","d"));
 3.  undefined
 4.  ReferenceError
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 0 2 4 
 
@@ -3360,7 +3360,7 @@ var person1 = new Person('John');
 3.  John undefined
 4.  John John
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) John Person 
 
@@ -3389,7 +3389,7 @@ console.log(userInfo.userName);
 3.  12345678 undefined
 4.  undefined undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  3) 12345678 undefined 
 
@@ -3410,7 +3410,7 @@ console.log(Employee.employeeId);
 3.  bq1uy
 4.  undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) undefined 
 
@@ -3436,7 +3436,7 @@ console.log(new Employee().employeeId);
 3.  bq1uy 1BJKSJ kj182
 4.  undefined 1BJKSJ kj182
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) bq1uy 1BJKSJ bq1uy 
 
@@ -3461,7 +3461,7 @@ var employeeId = 'aq123';
 3.  aq123 aq123
 4.  foo123 undefined 
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) foo123 aq123 
 
@@ -3486,7 +3486,7 @@ var employeeId = 'aq123';
 3.  World
 4.  [ 'W', 'o', 'r', 'l', 'd' ] 
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) [ 'W', 'o', 'r', 'l', 'd' ]  
 
@@ -3521,7 +3521,7 @@ var employeeId = 'aq123';
 3.  Total amount left in account: 3600 Total amount left in account: 3300
 4.  Total amount left in account: 5600 Total amount left in account: 5600
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) Total amount left in account: 5600 Total amount left in account: 5300 
 
@@ -3557,7 +3557,7 @@ var employeeId = 'aq123';
 3. 5600 3300 5100
 4. undefined undefined undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 5600 5300 5100
 
@@ -3593,7 +3593,7 @@ var employeeId = 'aq123';
 3. 5600 3300 5100
 4. undefined undefined undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) 3600 3300 3100
 
@@ -3614,7 +3614,7 @@ var employeeId = 'aq123';
 3. Window
 4. undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) Hello John
 
@@ -3648,7 +3648,7 @@ getDataFromServer('www.google.com').then(function(name){
 3. Reference Error
 4. fn is not defined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) John
 
@@ -3696,7 +3696,7 @@ getDataFromServer('www.google.com').then(function(name){
    [42, 23, 16, 15, 8, 2]
 4. Reference Error
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) [ 2, 8, 15, 16, 23, 42 ]
 			 [ 2, 8, 15, 16, 23, 42 ]
@@ -3726,7 +3726,7 @@ getDataFromServer('www.google.com').then(function(name){
 3. Reference Error
 4. Uncaught TypeError: Cannot read property 'fullName' of undefined
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  4) Uncaught TypeError: Cannot read property 'fullName' of undefined
 
@@ -3748,7 +3748,7 @@ console.log(numb);
 3. 2
 4. (2,4,5)
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 5
 
@@ -3770,7 +3770,7 @@ console.log(numb);
 3. ""
 4. 0
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) undefined
 
@@ -3796,7 +3796,7 @@ console.log(mul(2)(3)[1](4));
 3. Reference Error
 4. 10, 6
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 6, 10
 
@@ -3824,7 +3824,7 @@ console.log(mul(2)(3).sum(4));
 3. Reference Error
 4. 10, 6
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 6, 10
 
@@ -3852,7 +3852,7 @@ console.log(mul(2)(3)(4)(5)(6));
 3. Reference Error
 4. Type Error
 	
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  1) 720
 
@@ -3883,7 +3883,7 @@ personObj.getName2();
 3. undefined Tony
 4. Tony Tony
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 
  2) Tony undefined
 
@@ -3923,7 +3923,7 @@ while(a){
 	console.log('Hello')
 }
 ```
-<details><summary><b>Answer</b></summary> 
+<p><b><i>Answer</b></i></p> 
 The above program will print Hello infinitely. Since, Javascript is a single threaded language the actual execution happens only on the main thread. So, setTimeout will wailt for 2000 milliseconds on a seperate thread as while loop has occupied the main thread. The exit condition for the loop is to set the variable a as fasle. But as the loop continously running on the main thread , it a cannot be set false.
 </details>
 
@@ -3941,7 +3941,7 @@ setTimeout(() => {
 },2000)
 ```
 
-<details><summary><b>Answer</b></summary>
+<p><b><i>Answer</b></i></p>
 The above program will print 0 to 9 sequentially.
 </details>
 
